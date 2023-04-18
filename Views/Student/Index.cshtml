@@ -1,0 +1,20 @@
+﻿@model GroupViewModels
+
+
+<h1>Groups:</h1>
+
+<ul>
+    @foreach (var item in Model.Groups)
+    {
+        <li>@item.Id - @item.Name </li>
+    }
+</ul>
+
+<h1>Students:</h1>
+
+<ul>
+    @foreach (var item in Model.Students)
+    {
+        <li> <a href="./student/detail/@item.Id">@item.Id - @item.FullName - @item.Point</a></li>
+    }
+</ul>
